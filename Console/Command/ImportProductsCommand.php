@@ -52,7 +52,7 @@ class ImportProductsCommand extends Command
      */
     protected function configure()
     {
-        $this->setName('sagital:import')
+        $this->setName('sagital:import-products')
             ->setDescription('Import products from a CSV file')
             ->setDefinition([
                 new InputArgument(
@@ -83,7 +83,7 @@ class ImportProductsCommand extends Command
             ->create(\Magento\Framework\Filesystem::class);
 
         $file = $input->getArgument(self::FILE_ARGUMENT);
-        $imagesPath = $input->getOption(self::IMAGES_PATH_ARGUMENT);
+        $imagesPath = $input->getArgument(self::IMAGES_PATH_ARGUMENT);
 
         $directory = $filesystem->getDirectoryWrite(DirectoryList::ROOT);
 
