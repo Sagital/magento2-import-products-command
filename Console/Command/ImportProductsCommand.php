@@ -2,7 +2,9 @@
 
 namespace Sagital\ProductImporter\Console\Command;
 
-use Magento\Framework\Filesystem\DirectoryList;
+;
+
+use Magento\Framework\App\Filesystem\DirectoryList;
 use Symfony\Component\Console\Command\Command;
 use Magento\Framework\App\State;
 use Magento\Framework\ObjectManagerInterface;
