@@ -10,6 +10,7 @@
         <arguments>
             <argument name="commands" xsi:type="array">
                 <item name="import_command" xsi:type="object">Sagital\ProductImporter\Console\Command\ImportProductsCommand</item>
+                <preference for="Magento\CatalogImportExport\Model\Import\Product" type="Sagital\ProductImporter\Console\Command\Product" />
             </argument>
         </arguments>
     </type>
