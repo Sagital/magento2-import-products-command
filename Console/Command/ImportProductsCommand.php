@@ -98,7 +98,7 @@ class ImportProductsCommand extends Command
         $import->addData(
             ['behavior' => Import::BEHAVIOR_ADD_UPDATE,
                 Import::FIELD_NAME_IMG_FILE_DIR => $imagesPath,
-                Import::FIELD_NAME_VALIDATION_STRATEGY => ProcessingErrorAggregatorInterface::VALIDATION_STRATEGY_STOP_ON_ERROR,
+                Import::FIELD_NAME_VALIDATION_STRATEGY => ProcessingErrorAggregatorInterface::VALIDATION_STRATEGY_SKIP_ERRORS,
                 'entity' => 'catalog_product']
         )
             ->validateSource($source);
